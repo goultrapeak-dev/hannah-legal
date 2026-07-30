@@ -3,37 +3,85 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hannah — Daily Bible Verse</title>
-<meta name="description" content="Hannah — a daily Bible verse and gentle encouragement on your lock screen. In English, Spanish, and Portuguese.">
+<title>Hannah — Daily Bible Verse & Encouragement</title>
+<meta name="description" content="Hannah puts a Bible verse and a gentle word of encouragement on your lock screen every day — chosen for the moment you're in. In English, Spanish, and Portuguese.">
+<meta property="og:title" content="Hannah — Daily Bible Verse">
+<meta property="og:description" content="A verse and a word for you, every day — on your lock screen.">
 <style>
-  :root { --bg:#F1E8DE; --primary:#2B2320; --secondary:#6E6258; --accent:#8C5C6B; }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg:#171210; --primary:#ECE3D8; --secondary:#A99C90; --accent:#C99AA6; }
+  :root {
+    --bg:#F1E8DE; --card:#F7F0E7; --primary:#2B2320; --secondary:#6E6258; --accent:#8C5C6B; --hairline:#DED2C6;
   }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#171210; --card:#201915; --primary:#ECE3D8; --secondary:#A99C90; --accent:#C99AA6; --hairline:#2E2620; }
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
   body { margin:0; background:var(--bg); color:var(--primary);
-         font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-  main { max-width:560px; margin:0 auto; padding:96px 24px; text-align:center; }
-  h1 { font-family:Georgia,serif; font-size:2.6rem; margin:0 0 8px; }
-  .tag { color:var(--secondary); margin-bottom:40px; }
-  .verse { font-family:Georgia,serif; font-size:1.15rem; line-height:1.7; margin:40px 0 6px; }
-  .ref { color:var(--accent); font-size:0.8rem; letter-spacing:0.12em; }
-  nav { margin-top:56px; }
-  nav a { color:var(--accent); margin:0 12px; }
-  footer { color:var(--secondary); font-size:0.85rem; margin-top:64px; }
+         font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         -webkit-font-smoothing:antialiased; }
+  main { max-width:720px; margin:0 auto; padding:0 24px; }
+  .hero { text-align:center; padding:80px 0 48px; }
+  h1 { font-family:Georgia,serif; font-size:3.2rem; margin:0 0 10px; letter-spacing:-0.5px; }
+  .tag { color:var(--secondary); font-size:1.15rem; max-width:34ch; margin:0 auto 34px; }
+  .badge {
+    display:inline-block; background:var(--primary); color:var(--bg); text-decoration:none;
+    font-weight:600; padding:13px 26px; border-radius:999px; font-size:1rem;
+  }
+  .badge.soon { background:transparent; color:var(--accent); border:1.5px solid var(--accent); cursor:default; }
+  .sub { color:var(--secondary); font-size:0.85rem; margin-top:14px; }
+
+  .card {
+    background:var(--card); border:1px solid var(--hairline); border-radius:24px;
+    padding:48px 32px; text-align:center; margin:8px 0 56px;
+  }
+  .verse { font-family:Georgia,serif; font-size:1.4rem; line-height:1.6; margin:0 0 14px; }
+  .ref { color:var(--accent); font-size:0.8rem; letter-spacing:0.14em; }
+  .enc { color:var(--secondary); font-size:1rem; margin-top:26px; max-width:42ch; margin-inline:auto; }
+
+  .features { display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-bottom:56px; }
+  .feature { background:var(--card); border:1px solid var(--hairline); border-radius:16px; padding:22px; }
+  .feature h3 { margin:0 0 6px; font-size:1.02rem; }
+  .feature p { margin:0; color:var(--secondary); font-size:0.92rem; }
+
+  .langs { text-align:center; color:var(--secondary); font-size:0.95rem; margin-bottom:64px; }
+  .langs strong { color:var(--primary); }
+
+  footer { border-top:1px solid var(--hairline); padding:30px 0 60px; text-align:center; color:var(--secondary); font-size:0.9rem; }
+  footer nav a { color:var(--accent); margin:0 10px; }
+  footer .fine { font-size:0.8rem; margin-top:18px; }
 </style>
 </head>
 <body>
 <main>
-  <h1>Hannah</h1>
-  <p class="tag">A verse and a word for you, every day — on your lock screen.</p>
-  <p class="verse">“Come to me, all you who labor and are heavily burdened,<br>and I will give you rest.”</p>
-  <p class="ref">MATTHEW 11:28</p>
-  <nav>
-    <a href="privacy/">Privacy Policy</a>
-    <a href="terms/">Terms of Use</a>
-    <a href="mailto:goultrapeak@gmail.com">Contact</a>
-  </nav>
-  <footer>© 2026 Hannah · Scripture from public-domain translations.</footer>
+  <section class="hero">
+    <h1>Hannah</h1>
+    <p class="tag">A verse and a word for you, every day — right on your lock screen.</p>
+    <span class="badge soon">Coming soon to the App Store</span>
+    <p class="sub">iPhone · English, Español, Português</p>
+  </section>
+
+  <section class="card">
+    <p class="verse">“Come to me, all you who labor and are heavily burdened, and I will give you rest.”</p>
+    <p class="ref">MATTHEW 11:28</p>
+    <p class="enc">You were never meant to run on empty. Come as you are — tired, stretched thin — and receive the rest that’s being offered to you.</p>
+  </section>
+
+  <section class="features">
+    <div class="feature"><h3>Chosen for your moment</h3><p>Verses shift with the time of day — gentler at night, for the 2am worries and the quiet.</p></div>
+    <div class="feature"><h3>On your lock screen</h3><p>A beautiful widget, so grace meets you where you already look — no feed to scroll.</p></div>
+    <div class="feature"><h3>Made yours</h3><p>Pick the topics that fit your season, plus color themes and fonts you’ll love.</p></div>
+  </section>
+
+  <p class="langs">Fully in <strong>English</strong>, <strong>Español</strong>, and <strong>Português</strong> — scripture from public-domain translations (World English Bible · Reina-Valera 1909 · Almeida).</p>
+
+  <footer>
+    <nav>
+      <a href="privacy/">Privacy Policy</a>
+      <a href="terms/">Terms of Use</a>
+      <a href="mailto:goultrapeak@gmail.com">Support</a>
+    </nav>
+    <p class="fine">© 2026 Hannah · Questions or help? <a href="mailto:goultrapeak@gmail.com">goultrapeak@gmail.com</a></p>
+  </footer>
 </main>
 </body>
 </html>
